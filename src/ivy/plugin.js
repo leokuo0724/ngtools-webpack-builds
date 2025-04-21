@@ -96,7 +96,7 @@ class AngularWebpackPlugin {
         // Set resolver options
         const pathsPlugin = new paths_plugin_1.TypeScriptPathsPlugin();
         compiler.hooks.afterResolvers.tap(PLUGIN_NAME, (compiler) => {
-            compiler.resolverFactory.hooks.resolveOptions
+            compiler.resolverFactory.hooks?.resolveOptions
                 .for('normal')
                 .tap(PLUGIN_NAME, (resolveOptions) => {
                 resolveOptions.plugins ??= [];
